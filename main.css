@@ -1,0 +1,36 @@
+*{
+    box-sizing: border-box;
+}
+
+nav {
+    background-color: rgb(129, 129, 129);
+}
+
+main, nav {
+    margin: auto;
+    text-align: center;
+}
+
+.project-title-container{
+    margin: auto;
+    height: 50px;
+    border: black solid 1px;
+    width: 90%;
+}
+
+.project-title {
+    margin-top: 10px;
+    font-size: 24px;
+}
+
+.project-container {
+    margin: auto;
+    height: 200px;
+    background-color: grey;
+    width: 90%;
+    padding-top: 10px;
+}
+
+p {
+    font-size: 16px;
+}
