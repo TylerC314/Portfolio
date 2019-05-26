@@ -1,9 +1,13 @@
 *{
     box-sizing: border-box;
+    
 }
 
 nav {
     background-color: rgb(129, 129, 129);
+}
+main {
+    font-family: "Open Sans", "sans-seriff";
 }
 
 main, nav {
@@ -18,6 +22,7 @@ section {
 .project-title-container{
     margin: auto;
     height: 50px;
+    background-color: darkgray;
 }
 
 .project-title {
@@ -28,7 +33,7 @@ section {
 .project-container {
     margin: auto;
     height: 200px;
-    background-color: grey;
+    background-color: lightgray;
     padding-top: 10px;
 }
 
