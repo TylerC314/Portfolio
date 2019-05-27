@@ -2,12 +2,11 @@
     box-sizing: border-box;
     
 }
-
 nav {
     background-color: rgb(129, 129, 129);
 }
 main {
-    font-family: "Open Sans", "sans-seriff";
+    font-family: "Open sans", "sans-seriff";
 }
 
 main, nav {
@@ -39,4 +38,5 @@ section {
 
 p {
     font-size: 16px;
+    text-align: left;
 }
