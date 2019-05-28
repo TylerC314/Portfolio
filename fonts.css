@@ -1,0 +1,28 @@
+@font-face {
+    font-family: BioRhyme;
+    src: url(BioRhyme/BioRhyme-Regular.ttf);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: BioRhyme;
+    src: url(BioRhyme/BioRhyme-Bold.ttf);
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: BioRhyme;
+    src: url(BioRhyme/BioRhyme-ExtraBold.ttf);
+    font-weight: bolder;
+}
+
+@font-face {
+    font-family: Cabin;
+    src: url(Cabin/Cabin-Regular.ttf);
+}
+
+@font-face {
+    font-family: Cabin;
+    src: url(Cabin/Cabin-Bold.ttf);
+    font-weight: bold;
+}
