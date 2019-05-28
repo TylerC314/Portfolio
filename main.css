@@ -1,12 +1,23 @@
+@font-face {
+    font-family: BioRhyme;
+    src: url(BioRhyme/BioRhyme-Regular.ttf);
+}
+
+@font-face {
+    font-family: Cabin;
+    src: url(Cabin/Cabin-Regular.ttf);
+}
+
 *{
     box-sizing: border-box;
-    
 }
+
 nav {
     background-color: rgb(129, 129, 129);
 }
 main {
-    font-family: "Open sans", "sans-seriff";
+    font-family: "Cabin", "Open sans", "sans-seriff";
+    background-color: #EFF4F7;
 }
 
 main, nav {
@@ -14,8 +25,23 @@ main, nav {
     text-align: center;
 }
 
+ul{
+    width: 100%;
+    text-align: right;
+    padding-right: 10px;
+}
+
+a {
+    text-decoration: none;
+}
+
 section {
     border: black solid 1px;
+}
+
+header {
+    font-family: "BioRhyme", "Open sans", "sans-seriff";
+    color: #292F33;
 }
 
 .project-title-container{
@@ -27,12 +53,12 @@ section {
 .project-title {
     margin-top: 10px;
     font-size: 24px;
+    
 }
 
 .project-container {
     margin: auto;
     height: 200px;
-    background-color: lightgray;
     padding-top: 10px;
 }
 
