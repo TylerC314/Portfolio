@@ -8,46 +8,91 @@
     src: url(Cabin/Cabin-Regular.ttf);
 }
 
+:root {
+    --main-text-color: #0077cc;
+    --main-background-color: #e4f0f9;
+    --main-accent-color: #00365d;
+    --alternate-accent-color: #005da0;
+}
+
 *{
     box-sizing: border-box;
+    background-color: var(--main-background-color);
+    font-family: "Cabin", "Open sans", "sans-seriff";
+    font-size: 20px;
+    color: var(--main-text-color);
 }
 
 nav {
-    background-color: rgb(129, 129, 129);
+    background-color: var(--main-accent-color);
 }
 main {
-    font-family: "Cabin", "Open sans", "sans-seriff";
-    background-color: #EFF4F7;
+    line-height: 1.5;
 }
 
 main, nav {
     margin: auto;
-    text-align: center;
+    margin-top: 20%;
 }
 
-ul{
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.contact-info {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.contact-info > a {
+    color: var(--main-accent-color);
+    border-bottom: 1px solid var(--main-accent-color);
+    margin: 0 5px;
+}
+
+.contact-info > a:visited {
+    color: var(--main-accent-color);
+}
+
+.contact-info > a:hover{
+    cursor: pointer;
+}
+
+.interests-list{
+    margin: 0;
+    list-style-type: none;
+}
+
+.interests-list > li::before{
+    content: "-";
+}
+
+.contact-info{
     width: 100%;
     text-align: right;
     padding-right: 10px;
 }
 
-a {
+.contact-info a {
     text-decoration: none;
 }
 
 section {
     border: black solid 1px;
+    padding: 10px;
 }
 
 header {
     font-family: "BioRhyme", "Open sans", "sans-seriff";
-    color: #292F33;
 }
 
 .project-title-container{
     margin: auto;
-    height: 50px;
-    background-color: darkgray;
+    /* height: 50px; */
+    background-color: var(--main-accent-color);
 }
 
 .project-title {
@@ -57,12 +102,15 @@ header {
 }
 
 .project-container {
-    margin: auto;
-    height: 200px;
+    margin: 0 auto;
+    /* height: 200px; */
     padding-top: 10px;
+
 }
 
-p {
-    font-size: 16px;
-    text-align: left;
+.project-container > img {
+    display: block;
+    width: 90%;
+    height: 200px;
+    margin: 0 auto;
 }
