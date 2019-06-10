@@ -22,8 +22,8 @@ function displayLogos(logoContainer){
 test = new Project("images/Star Wars Quiz Screenshot.png",
     "A screenshot of the quiz",
     "A quiz to test your Star Wars Knowledge!",
-    [new Logo("images/HTML5 logo.png", "html5 logo"),
-        new Logo("images/CSS3 logo.png", "css3 logo"),
+    [new Logo("images/HTML5 Logo.png", "html5 logo"),
+        new Logo("images/CSS3 Logo.png", "css3 logo"),
         new Logo("images/Javascript Logo.png", "javascript logo"),
         new Logo("images/jQuery Logo.png", "jQuery logo")]);
 
