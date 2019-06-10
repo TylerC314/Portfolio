@@ -13,19 +13,20 @@ function Logo(imageLocation, altDescription) {
 
 function displayLogos(logoContainer){
     let logoList = "";
-    for(let i = 0; i < logoContainer.length; ++i) {
-        logoList += `<img src="${logoContainer[i].imageLocation}" alt="${logoContainer[i].imageDescription}">`
-    }
+    logoContainer.forEach(function(element) {
+        logoList += `<img src="${element.imageLocation}" alt="${element.imageDescription}">`
+    });
     return logoList;
 };
 
-test = new Project("images/Star Wars Quiz Screenshot.png",
+const projectContainer = [new Project("images/Star Wars Quiz Screenshot.png",
     "A screenshot of the quiz",
     "A quiz to test your Star Wars Knowledge!",
     [new Logo("images/HTML5 Logo.png", "html5 logo"),
-        new Logo("images/CSS3 Logo.png", "css3 logo"),
-        new Logo("images/Javascript Logo.png", "javascript logo"),
-        new Logo("images/jQuery Logo.png", "jQuery logo")]);
+    new Logo("images/CSS3 Logo.png", "css3 logo"),
+    new Logo("images/Javascript Logo.png", "javascript logo"),
+    new Logo("images/jQuery Logo.png", "jQuery logo")])
+];
 
 function displayHeadline(){
     $("main").html("");
@@ -60,7 +61,6 @@ function displayBio(){
 }
 
 function displayProject(project){
-    $("main").html("");
     $("main").append(`
     <section class="project-title-container">
         <header role="heading" class="project-title">
@@ -76,6 +76,13 @@ function displayProject(project){
     </section>`);
 }
 
+function displayAllProjects() {
+    $("main").html("");
+    projectContainer.forEach(function(element) {
+        displayProject(element);
+    });
+}
+
 function handlers(){
     $(".headline-button").click(function() {
         displayHeadline();
@@ -84,9 +91,8 @@ function handlers(){
     $(".bio-button").click(function() {
         displayBio();
     });
-
-    $(".projects-button").click(function() {
-        displayProject(test);
+    $("html").on("click", ".projects-button", function() {
+        displayAllProjects();
     });
 }
 
