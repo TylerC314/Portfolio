@@ -1,7 +1,10 @@
-function Project(image, imageDescription, projectDescription, logoContainer) {
+function Project(projectName, image, imageDescription, projectDescription, projectSite, gitHubRepo, logoContainer) {
+    this.projectName = projectName;
     this.image = image;
     this.imageDescription = imageDescription;
     this.projecDescription = projectDescription;
+    this.projectSite = projectSite;
+    this.gitHubRepo = gitHubRepo;
     this.logoContainer = logoContainer;
     this.logoDisplay = displayLogos(this.logoContainer);
 }
@@ -19,13 +22,17 @@ function displayLogos(logoContainer){
     return logoList;
 };
 
-const projectContainer = [new Project("images/Star Wars Quiz Screenshot.png",
-    "A screenshot of the quiz",
-    "A quiz to test your Star Wars Knowledge!",
-    [new Logo("images/HTML5 Logo.png", "html5 logo"),
-    new Logo("images/CSS3 Logo.png", "css3 logo"),
-    new Logo("images/Javascript Logo.png", "javascript logo"),
-    new Logo("images/jQuery Logo.png", "jQuery logo")])
+const projectContainer = [
+    new Project("Star Wars Quiz",
+        "images/Star Wars Quiz Screenshot.png",
+        "A screenshot of the quiz",
+        "A quiz to test your Star Wars Knowledge!",
+        "https://tylerc314.github.io/quiz-app/",
+        "https://github.com/TylerC314/quiz-app",
+        [new Logo("images/HTML5 Logo.png", "html5 logo"),
+        new Logo("images/CSS3 Logo.png", "css3 logo"),
+        new Logo("images/Javascript Logo.png", "javascript logo"),
+        new Logo("images/jQuery Logo.png", "jQuery logo")]),
 ];
 
 function displayHeadline(){
@@ -43,7 +50,7 @@ function displayHeadline(){
         <p>If you're interested in seeing my projects or contacing me via Email use the following links:</p>
         <ul>
             <button class="projects-button">Projects</button>
-            <button>Email</button>
+            <button class="email-button" onclick="location.href='mailto:tylerclark314@gmail.com;'">Email</button>
         </ul>
     </section>`);
 }
@@ -60,16 +67,20 @@ function displayBio(){
     </section>`);
 }
 
-function displayProject(project){
+function displayProject(project) {
     $("main").append(`
     <section class="project-title-container">
         <header role="heading" class="project-title">
-            Star Wars Quiz
+            ${project.projectName}
         </header>
     </section>
     <section class="project-container">
         <img src="${project.image}" class= "project-picture" alt="Test text">
         <p class="project-text">${project.projecDescription}</p>
+        <ul>
+        <a href="${project.projectSite}">Site Link</a>
+        <a href="${project.gitHubRepo}">GitHub repo</a>
+    </ul>
         <section class="logos">
             ${project.logoDisplay}
         </section>
