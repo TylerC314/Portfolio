@@ -103,9 +103,7 @@ header {
 
 .project-container {
     margin: 0 auto;
-    /* height: 200px; */
     padding-top: 10px;
-
 }
 
 .project-container > img {
@@ -113,4 +111,13 @@ header {
     width: 90%;
     height: 200px;
     margin: 0 auto;
+}
+
+.logos {
+    border: none;
+}
+
+.logos > img {
+    height: 30px;
+    width: 30px;
 }
