@@ -1,12 +1,31 @@
-function Project(image, imageDescription, projectDescription) {
+function Project(image, imageDescription, projectDescription, logoContainer) {
     this.image = image;
     this.imageDescription = imageDescription;
     this.projecDescription = projectDescription;
+    this.logoContainer = logoContainer;
+    this.logoDisplay = displayLogos(this.logoContainer);
 }
 
-test = new Project("Star Wars Quiz.png",
+function Logo(imageLocation, altDescription) {
+    this.imageLocation = imageLocation;
+    this.altDescription = altDescription;
+}
+
+function displayLogos(logoContainer){
+    let logoList = "";
+    for(let i = 0; i < logoContainer.length; ++i) {
+        logoList += `<img src="${logoContainer[i].imageLocation}" alt="${logoContainer[i].imageDescription}">`
+    }
+    return logoList;
+};
+
+test = new Project("images/Star Wars Quiz Screenshot.png",
     "A screenshot of the quiz",
-    "A quiz to test your Star Wars Knowledge!");
+    "A quiz to test your Star Wars Knowledge!",
+    [new Logo("images/HTML5 logo.png", "html5 logo"),
+        new Logo("images/CSS3 logo.png", "css3 logo"),
+        new Logo("images/Javascript Logo.png", "javascript logo"),
+        new Logo("images/jQuery Logo.png", "jQuery logo")]);
 
 function displayHeadline(){
     $("main").html("");
@@ -49,7 +68,11 @@ function displayProject(project){
         </header>
     </section>
     <section class="project-container">
+        <img src="${project.image}" class= "project-picture" alt="Test text">
         <p class="project-text">${project.projecDescription}</p>
+        <section class="logos">
+            ${project.logoDisplay}
+        </section>
     </section>`);
 }
 
@@ -69,7 +92,7 @@ function handlers(){
 
 
 function display(){
-    // displayHeadline();
+    displayHeadline();
     handlers();
 }
 
