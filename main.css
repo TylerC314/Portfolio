@@ -9,40 +9,71 @@
 }
 
 :root {
-    --main-text-color: #0077cc;
-    --main-background-color: #e4f0f9;
-    --main-accent-color: #00365d;
-    --alternate-accent-color: #005da0;
+    --main-text-color: #14f500;
+    --main-background-color: #000000a2;
+    --main-accent-color: #ff0000;
+    --alternate-accent-color: #b6b6b6;
 }
 
 *{
     box-sizing: border-box;
-    background-color: var(--main-background-color);
     font-family: "Cabin", "Open sans", "sans-seriff";
     font-size: 18px;
     color: var(--main-text-color);
 }
 
 html{
+    background: url(images/background.png);
     position: relative;
     min-height: 100%;
 }
 
-nav {
-    background-color: var(--main-accent-color);
+.title-header-container {
+    text-align: center;
+    background-color: var(--main-background-color);
+    margin-bottom: 10px;
 }
+
+header {
+    text-align: center;
+    font-family: "BioRhyme", "Open sans", "sans-seriff";
+}
+
+h1 {
+    font-size: 30px;
+    font-weight: normal;
+    font-style: normal;
+    font-family: "BioRhyme", "Open sans", "sans-seriff";
+    height: 35px;
+}
+
+h2 {
+    font-weight: normal;
+    font-style: normal;
+    margin: 0 0 0 10px;
+    font-size: 24px;
+}
+
 main {
     line-height: 1.5;
+    margin-top: 20%;
+    width: 95%;
+    background: inherit;
 }
 
 main, nav {
-    margin: auto;
-    margin-top: 20%;
+    margin: 0 auto;
+    
 }
 
 ul {
     list-style: none;
     padding-left: 0;
+    background-color: var(--main-background-color);
+}
+
+button {
+    background-color: var(--main-background-color);
 }
 
 .contact-info {
@@ -86,23 +117,14 @@ ul {
 }
 
 section {
-    border: black solid 1px;
-    padding: 10px;
+    border: solid var(--alternate-accent-color) 1px;
+    padding: 2%;
 }
 
-header {
-    font-family: "BioRhyme", "Open sans", "sans-seriff";
-}
-
-.project-title-container{
+.title-container{
     margin: auto;
-    background-color: var(--main-accent-color);
-}
-
-.project-title {
-    margin-top: 10px;
-    font-size: 24px;
-    
+    height: 50px;
+    background-color: var(--main-background-color);
 }
 
 .project-container {
@@ -131,8 +153,11 @@ header {
     width: 30px;
 }
 
+p {
+    background-color: var(--main-background-color);
+}
+
 footer {
-    position: absolute;
     text-align: right;
     bottom: 0;
     right: 10px;
