@@ -26,7 +26,7 @@ const projectContainer = [
     new Project("Star Wars Quiz",
         "images/Star Wars Quiz Screenshot.png",
         "A screenshot of the quiz",
-        "A quiz to test your Star Wars Knowledge!",
+        "A quiz to test your Star Wars trivia knowledge. It will randomly sort the questions and the answers on display.",
         "https://tylerc314.github.io/quiz-app/",
         "https://github.com/TylerC314/quiz-app",
         [new Logo("images/HTML5 Logo.png", "html5 logo"),
@@ -35,9 +35,14 @@ const projectContainer = [
         new Logo("images/jQuery Logo.png", "jQuery logo")]),
 ];
 
-function displayHeadline(){
+function displayAboutMe(){
     $("main").html("");
     $("main").append(`
+    <section class="title-container">
+        <header role="heading" class="project-title">
+            <h2>About Me<h2>
+        </header>
+    </section>
     <section class="headline-container">
         <p>Hello, I’m Tyler. I’m a full-stack developer living in the Greater Seattle Area</p>
         <p>My interests include: </p>
@@ -47,15 +52,21 @@ function displayHeadline(){
             <li>Meditation</li>
             <li>Programming</li>
         </ul>
+        <p>As a current student in the Thinkful Full-Stack Flex program I’m interested in web-development and being on
+            the front end of new technologies. I’ve always enjoyed solving puzzles, so programming has been a natural
+            fit for me. Learning new, more optimal ways of solving problems is one of my favorite things about being a
+            web developer. In my off time, I enjoy PC gaming and going to the gym.
+        </p>
         <p>If you're interested in seeing my projects or contacing me via Email use the following links:</p>
         <ul>
             <button class="projects-button">Projects</button>
             <button class="email-button" onclick="location.href='mailto:tylerclark314@gmail.com;'">Email</button>
-        </ul>
-    </section>`);
+        </ul>   
+    </section>
+    `);
 }
 
-function displayBio(){
+function displayContactMe(){
     $("main").html("");
     $("main").append(`
     <section class="bio-container">
@@ -69,9 +80,9 @@ function displayBio(){
 
 function displayProject(project) {
     $("main").append(`
-    <section class="project-title-container">
+    <section class="title-container">
         <header role="heading" class="project-title">
-            ${project.projectName}
+            <h2>${project.projectName}<h2>
         </header>
     </section>
     <section class="project-container">
@@ -81,6 +92,7 @@ function displayProject(project) {
         <a href="${project.projectSite}">Site Link</a>
         <a href="${project.gitHubRepo}">GitHub repo</a>
     </ul>
+        <p>Technologies used:<p>
         <section class="logos">
             ${project.logoDisplay}
         </section>
@@ -95,12 +107,12 @@ function displayAllProjects() {
 }
 
 function handlers(){
-    $(".headline-button").click(function() {
-        displayHeadline();
+    $(".about-me-button").click(function() {
+        displayAboutMe();
     });
     
-    $(".bio-button").click(function() {
-        displayBio();
+    $(".contact-me-button").click(function() {
+        displayContactMe();
     });
     $("html").on("click", ".projects-button", function() {
         displayAllProjects();
@@ -109,7 +121,7 @@ function handlers(){
 
 
 function display(){
-    displayHeadline();
+    displayAboutMe();
     handlers();
 }
 
