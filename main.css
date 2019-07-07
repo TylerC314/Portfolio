@@ -10,7 +10,7 @@
 
 :root {
     --main-text-color: #14f500;
-    --main-background-color: #000000a2;
+    --main-background-color: #00000086;
     --main-accent-color: #ff0000;
     --alternate-accent-color: #b6b6b6;
 }
@@ -23,7 +23,7 @@
 }
 
 html{
-    background: url(images/background-full.png);
+    background: url(images/Background/Background.png);
     position: relative;
     min-height: 100%;
 }
@@ -98,8 +98,14 @@ button {
     color: var(--main-accent-color);
 }
 
-.contact-list > a:hover{
+.contacts-list > a:hover{
     cursor: pointer;
+}
+
+.contacts-list > li > img {
+    width: 15px;
+    height: 15px;
+
 }
 
 .interests-list{
@@ -127,23 +133,42 @@ section {
     padding-top: 10px;
 }
 
-.project-container > img {
-    display: block;
-    width: 95%;
-    height: 200px;
-    margin: 0 auto;
+.project-container > section {
+    border: none;
+    margin-left: -6.5px;
+    padding: 10px;
 }
 
 .project-container > ul {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+.project-links > ul {
+    display: flex;
+    flex-direction: column;
+}
+
+.project-container > ul > li > img {
+    width: 280px;
+    height: 200px;
 }
 
 .logos {
     border: none;
+    display: flex;
+    flex-direction: row;
+    margin-top: -30px;
 }
 
-.logos > img {
+.logos > ul {
+    display: flex;
+    flex-direction: row;
+}
+
+.logos > ul > li > img {
     height: 30px;
     width: 30px;
 }
@@ -156,4 +181,11 @@ footer {
     text-align: right;
     bottom: 0;
     right: 10px;
+}
+
+@media screen and (min-width: 768px) {
+    .project-container > ul > li > img {
+        width: 650px;
+        height: 600px;
+    }
 }
