@@ -18,9 +18,12 @@ function Image(imageLocation, altDescription) {
 function displayImages(imageContainer){
     let logoList = "";
     imageContainer.forEach(function(element) {
-        logoList += `<img src="${element.imageLocation}" alt="${element.altDescription}">`
+        logoList += `<li><img src="${element.imageLocation}" alt="${element.altDescription}"></li>`
     });
-    return logoList;
+    return `
+    <ul>
+        ${logoList}
+    </ul>`;
 };
 
 const projectContainer = [
@@ -28,8 +31,8 @@ const projectContainer = [
         [
             new Image("images/Quiz Project/Quiz Start.png", "Opening Screen"),
             new Image("images/Quiz Project/Quiz Display 1.png", "View of the first Question"),
+            new Image("images/Quiz Project/Quiz Question Incorrect.png", "A correct answer"),
             new Image("images/Quiz Project/Quiz Answer Highlight.png", "A highlighted answer"),
-            new Image("images/Quiz Project/Quiz Question Correct.png", "A correct answer"),
             new Image("images/Quiz Project/Quiz End Screen.png", "The quiz' final screen")
         ],
         "A screenshot of the quiz",
@@ -79,9 +82,12 @@ function displayContactMe() {
     <section class="contact-container">
         <p>If you'd like to get in contact with me you can contact me through the following links:</p>
         <ul class="contacts-list">
-            <li><a href="https://www.linkedin.com/in/tyler-clark-171974185/">LinkedIn</a></li>
-            <li><a href="https://github.com/TylerC314">GitHub</a></li>
-            <li><a href="mailto:tylerclark314@gmail.com">Email</a></li>
+            <li><img src="images/Logos/LinkedIn.png" alt="LinkedIn Logo">
+            <a href="https://www.linkedin.com/in/tyler-clark-171974185/">LinkedIn</a></li>
+            <li><img src="images/Logos/GitHub Light.png" alt="GitHub Logo">
+            <a href="https://github.com/TylerC314">GitHub</a></li>
+            <li><img src="images/Logos/Email.png" alt="Email">
+            <a href="mailto:tylerclark314@gmail.com">Email</a></li>
         </ul>
     </section>`);
 }
@@ -96,12 +102,14 @@ function displayProject(project) {
     <section class="project-container">
         <p class="project-text">${project.projecDescription}</p>
         ${project.projectDisplay}
-        <ul>
-        <a href="${project.projectSite}">Site Link</a>
-        <a href="${project.gitHubRepo}">GitHub repo</a>
-    </ul>
-        <p>Technologies used:<p>
+        <section class="project-links">
+            <ul>
+                <a href="${project.projectSite}">Site Link</a>
+                <a href="${project.gitHubRepo}">GitHub repo</a>
+            </ul>
+        </section>
         <section class="logos">
+            <p>Technologies used:<p>
             ${project.logoDisplay}
         </section>
     </section>`);
