@@ -23,7 +23,7 @@
 }
 
 html{
-    background: url(images/background.png);
+    background: url(images/background-full.png);
     position: relative;
     min-height: 100%;
 }
@@ -76,6 +76,11 @@ button {
     background-color: var(--main-background-color);
 }
 
+.contact-container {
+    display: flex;
+    flex-direction: column;
+}
+
 .contact-info {
     margin-left: auto;
     margin-right: auto;
@@ -89,11 +94,11 @@ button {
     margin: 0 5px;
 }
 
-.contact-info > a:visited {
+.contacts-list > a:visited {
     color: var(--main-accent-color);
 }
 
-.contact-info > a:hover{
+.contact-list > a:hover{
     cursor: pointer;
 }
 
@@ -104,16 +109,6 @@ button {
 
 .interests-list > li::before{
     content: "-";
-}
-
-.contact-info{
-    width: 100%;
-    text-align: right;
-    padding-right: 10px;
-}
-
-.contact-info a {
-    text-decoration: none;
 }
 
 section {
@@ -134,7 +129,7 @@ section {
 
 .project-container > img {
     display: block;
-    width: 90%;
+    width: 95%;
     height: 200px;
     margin: 0 auto;
 }
