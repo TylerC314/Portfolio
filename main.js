@@ -48,12 +48,12 @@ const projectContainer = [
 function displayAboutMe(){
     $("main").html("");
     $("main").append(`
-    <section class="title-container">
+    <section class="title-container main-display">
         <header role="heading" class="project-title">
             <h2>About Me<h2>
         </header>
     </section>
-    <section class="headline-container">
+    <section class="headline-container main-display">
         <p>Hello, I’m Tyler. I’m a full-stack developer living in the Greater Seattle Area</p>
         <p>My interests include: </p>
         <ul class="interests-list">
@@ -79,22 +79,22 @@ function displayAboutMe(){
 function displayContactMe() {
     $("main").html("");
     $("main").append(`
-    <section class="contact-container">
+    <section class="contact-container main-display">
         <p>If you'd like to get in contact with me you can contact me through the following links:</p>
         <ul class="contacts-list">
             <li><img src="images/Logos/LinkedIn.png" alt="LinkedIn Logo">
-            <a href="https://www.linkedin.com/in/tyler-clark-171974185/">LinkedIn</a></li>
+            <a href="https://www.linkedin.com/in/tyler-clark-171974185/"><span class="link-text">LinkedIn</span></a></li>
             <li><img src="images/Logos/GitHub Light.png" alt="GitHub Logo">
-            <a href="https://github.com/TylerC314">GitHub</a></li>
+            <a href="https://github.com/TylerC314"><span class="link-text">GitHub</span></a></li>
             <li><img src="images/Logos/Email.png" alt="Email">
-            <a href="mailto:tylerclark314@gmail.com">Email</a></li>
+            <a href="mailto:tylerclark314@gmail.com"><span class="link-text">Email</span></a></li>
         </ul>
     </section>`);
 }
 
 function displayProject(project) {
     $("main").append(`
-    <section class="title-container">
+    <section class="title-container main-display">
         <header role="heading" class="project-title">
             <h2>${project.projectName}<h2>
         </header>
@@ -104,8 +104,8 @@ function displayProject(project) {
         ${project.projectDisplay}
         <section class="project-links">
             <ul>
-                <a href="${project.projectSite}">Site Link</a>
-                <a href="${project.gitHubRepo}">GitHub repo</a>
+                <a href="${project.projectSite}"><span class="link-text">Site Link</span></a>
+                <a href="${project.gitHubRepo}"><span class="link-text">GitHub repo</span></a>
             </ul>
         </section>
         <section class="logos">
