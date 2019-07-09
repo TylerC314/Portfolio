@@ -64,11 +64,6 @@ function displayAboutMe(){
             fit for me. Learning new, more optimal ways of solving problems is one of my favorite things about being a
             web developer. In my off time, I enjoy PC gaming and going to the gym.
         </p>
-        <p>If you're interested in seeing my projects or contacing me via Email use the following links:</p>
-        <ul>
-            <li><button class="projects-button">Projects</button><li>
-            <li><button class="email-button" onclick="location.href='mailto:tylerclark314@gmail.com;'">Email</button><li>
-        </ul>   
     </section>
     `);
 }

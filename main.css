@@ -101,11 +101,6 @@ button {
     background-color: var(--main-background-color);
 }
 
-.headline-container > ul {
-    display: flex;
-    flex-direction: row;
-}
-
 .contact-me-container {
     display: flex;
     flex-direction: column;
