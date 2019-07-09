@@ -86,15 +86,15 @@ function displayProject(project) {
 
         <section class="logos">
             <p>Technologies used:<p>
-            ${project.logoDisplay}
+            <div>${project.logoDisplay}<div>
         </section>
         <section class="project-links">
+        <p>Try it out:</p>
             <ul>
-                <span>Try it out: </span><a href="${project.projectSite}" target="_blank">Site Link</a>
-                <a href="${project.gitHubRepo}" target="_blank">GitHub repo</a>
+                <li><a href="${project.projectSite}" target="_blank">Site Link</a></li>
+                <li><a href="${project.gitHubRepo}" target="_blank">GitHub repo</a></li>
             </ul>
         </section>
-        
     </section>`);
 }
 
