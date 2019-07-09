@@ -29,20 +29,18 @@ function displayImages(imageContainer){
 const projectContainer = [
     new Project("Star Wars Quiz",
         [
-            new Image("images/Quiz Project/Quiz Start.png", "Opening Screen"),
-            new Image("images/Quiz Project/Quiz Display 1.png", "View of the first Question"),
-            new Image("images/Quiz Project/Quiz Question Incorrect.png", "A correct answer"),
-            new Image("images/Quiz Project/Quiz Answer Highlight.png", "A highlighted answer"),
-            new Image("images/Quiz Project/Quiz End Screen.png", "The quiz' final screen")
+            new Image("images/Quiz Project/Quiz Answer Highlight.png", "A highlighted answer")
         ],
         "A screenshot of the quiz",
         "A quiz to test your Star Wars trivia knowledge. It will randomly sort the questions and the answers on display.",
         "https://tylerc314.github.io/quiz-app/",
         "https://github.com/TylerC314/quiz-app",
-        [new Image("images/Logos/HTML5 Logo.png", "html5 logo"),
-        new Image("images/Logos/CSS3 Logo.png", "css3 logo"),
-        new Image("images/Logos/Javascript Logo.png", "javascript logo"),
-        new Image("images/Logos/jQuery Logo.png", "jQuery logo")]),
+        [
+            new Image("images/Logos/HTML5 Logo.png", "html5 logo"),
+            new Image("images/Logos/CSS3 Logo.png", "css3 logo"),
+            new Image("images/Logos/Javascript Logo.png", "javascript logo"),
+            new Image("images/Logos/jQuery Logo.png", "jQuery logo")
+        ]),
 ];
 
 function displayAboutMe(){
@@ -83,9 +81,9 @@ function displayContactMe() {
         <p>If you'd like to get in contact with me you can contact me through the following links:</p>
         <ul class="contacts-list">
             <li><img src="images/Logos/LinkedIn.png" alt="LinkedIn Logo">
-            <a href="https://www.linkedin.com/in/tyler-clark-171974185/"><span class="link-text">LinkedIn</span></a></li>
+            <a href="https://www.linkedin.com/in/tyler-clark-171974185/" target="_blank"><span class="link-text">LinkedIn</span></a></li>
             <li><img src="images/Logos/GitHub Light.png" alt="GitHub Logo">
-            <a href="https://github.com/TylerC314"><span class="link-text">GitHub</span></a></li>
+            <a href="https://github.com/TylerC314" target="_blank"><span class="link-text">GitHub</span></a></li>
             <li><img src="images/Logos/Email.png" alt="Email">
             <a href="mailto:tylerclark314@gmail.com"><span class="link-text">Email</span></a></li>
         </ul>
@@ -104,8 +102,8 @@ function displayProject(project) {
         ${project.projectDisplay}
         <section class="project-links">
             <ul>
-                <a href="${project.projectSite}"><span class="link-text">Site Link</span></a>
-                <a href="${project.gitHubRepo}"><span class="link-text">GitHub repo</span></a>
+                <a href="${project.projectSite}" target="_blank"><span class="link-text">Site Link</span></a>
+                <a href="${project.gitHubRepo}" target="_blank"><span class="link-text">GitHub repo</span></a>
             </ul>
         </section>
         <section class="logos">
