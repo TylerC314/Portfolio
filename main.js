@@ -46,8 +46,8 @@ const projectContainer = [
 function displayAboutMe(){
     $("main").append(`
     <section class="about-me-container title-container main-display">
-        <header role="heading" class="project-title">
-            <h2>About Me<h2>
+        <header class="project-title">
+            <h2>About Me</h2>
         </header>
     </section>
     <section class="headline-container main-display">
@@ -66,8 +66,8 @@ function displayAboutMe(){
         </p>
         <p>If you're interested in seeing my projects or contacing me via Email use the following links:</p>
         <ul>
-            <button class="projects-button">Projects</button>
-            <button class="email-button" onclick="location.href='mailto:tylerclark314@gmail.com;'">Email</button>
+            <li><button class="projects-button">Projects</button><li>
+            <li><button class="email-button" onclick="location.href='mailto:tylerclark314@gmail.com;'">Email</button><li>
         </ul>   
     </section>
     `);
@@ -76,8 +76,8 @@ function displayAboutMe(){
 function displayProject(project) {
     $("main").append(`
     <section class="project-title-container title-container main-display">
-        <header role="heading" class="project-title">
-            <h2>${project.projectName}<h2>
+        <header class="project-title">
+            <h2>${project.projectName}</h2>
         </header>
     </section>
     <section class="project-container">
@@ -86,7 +86,7 @@ function displayProject(project) {
 
         <section class="logos">
             <p>Technologies used:<p>
-            <div>${project.logoDisplay}<div>
+            <div>${project.logoDisplay}</div>
         </section>
         <section class="project-links">
         <p>Try it out:</p>
