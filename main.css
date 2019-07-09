@@ -92,7 +92,7 @@ button {
     color: var(--alternate-text-color);
 }
 
-.contact-container {
+.contact-me-container {
     display: flex;
     flex-direction: column;
 }

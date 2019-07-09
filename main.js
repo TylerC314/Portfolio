@@ -44,9 +44,9 @@ const projectContainer = [
 ];
 
 function displayAboutMe(){
-    $("main").html("");
+    // $("main").html("");
     $("main").append(`
-    <section class="title-container main-display">
+    <section class="about-me-container title-container main-display">
         <header role="heading" class="project-title">
             <h2>About Me<h2>
         </header>
@@ -74,25 +74,9 @@ function displayAboutMe(){
     `);
 }
 
-function displayContactMe() {
-    $("main").html("");
-    $("main").append(`
-    <section class="contact-container main-display">
-        <p>If you'd like to get in contact with me you can contact me through the following links:</p>
-        <ul class="contacts-list">
-            <li><img src="images/Logos/LinkedIn.png" alt="LinkedIn Logo">
-            <a href="https://www.linkedin.com/in/tyler-clark-171974185/" target="_blank"><span class="link-text">LinkedIn</span></a></li>
-            <li><img src="images/Logos/GitHub-Light.png" alt="GitHub Logo">
-            <a href="https://github.com/TylerC314" target="_blank"><span class="link-text">GitHub</span></a></li>
-            <li><img src="images/Logos/Email.png" alt="Email">
-            <a href="mailto:tylerclark314@gmail.com"><span class="link-text">Email</span></a></li>
-        </ul>
-    </section>`);
-}
-
 function displayProject(project) {
     $("main").append(`
-    <section class="title-container main-display">
+    <section class="project-title-container title-container main-display">
         <header role="heading" class="project-title">
             <h2>${project.projectName}<h2>
         </header>
@@ -113,29 +97,74 @@ function displayProject(project) {
     </section>`);
 }
 
+function displayContactMe() {
+    // $("main").html("");
+    $("main").append(`
+    <section class="contact-me-container main-display">
+        <p>If you'd like to get in contact with me you can contact me through the following links:</p>
+        <ul class="contacts-list">
+            <li><img src="images/Logos/LinkedIn.png" alt="LinkedIn Logo">
+            <a href="https://www.linkedin.com/in/tyler-clark-171974185/" target="_blank"><span class="link-text">LinkedIn</span></a></li>
+            <li><img src="images/Logos/GitHub-Light.png" alt="GitHub Logo">
+            <a href="https://github.com/TylerC314" target="_blank"><span class="link-text">GitHub</span></a></li>
+            <li><img src="images/Logos/Email.png" alt="Email">
+            <a href="mailto:tylerclark314@gmail.com"><span class="link-text">Email</span></a></li>
+        </ul>
+    </section>`);
+}
+
 function displayAllProjects() {
-    $("main").html("");
+    // $("main").html("");
     projectContainer.forEach(function(element) {
         displayProject(element);
     });
 }
 
 function handlers(){
-    $(".about-me-button").click(function() {
-        displayAboutMe();
-    });
+    // $(".about-me-button").click(function() {
+    //     displayAboutMe();
+    // });
     
-    $(".contact-me-button").click(function() {
-        displayContactMe();
+    // $(".contact-me-button").click(function() {
+    //     displayContactMe();
+    // });
+    // $("html").on("click", ".projects-button", function() {
+    //     displayAllProjects();
+    // });
+
+    $(".about-me-button").click(function() {
+        $("body, html").animate(
+            {
+                scrollTop: $(".title-container").offset().top
+            },
+            300
+        );
     });
-    $("html").on("click", ".projects-button", function() {
-        displayAllProjects();
+
+    $(".projects-button").click(function() {
+        $("body, html").animate(
+            {
+                scrollTop: $(".project-title-container").offset().top
+            },
+            300
+        );
+    });
+
+    $(".contact-me-button").click(function() {
+        $("body, html").animate(
+            {
+                scrollTop: $(".contact-me-container").offset().top
+            },
+            300
+        );
     });
 }
 
 
 function display(){
     displayAboutMe();
+    displayAllProjects();
+    displayContactMe();
     handlers();
 }
 
