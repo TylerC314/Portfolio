@@ -74,7 +74,7 @@ h2 {
 main {
     line-height: 1.5;
     margin-top: 20%;
-    width: 95%;
+    width: 100%;
     padding-bottom: 100px;
     background: inherit;
 }
@@ -85,6 +85,15 @@ main, nav {
 
 .main-display {
     background-color: var(--main-background-color);
+}
+
+.content-container {
+    width: 95%;
+    margin: 0 auto;
+}
+
+div {
+    margin-bottom: 3%;
 }
 
 ul {
@@ -103,6 +112,8 @@ button {
 .contact-me-container {
     display: flex;
     flex-direction: column;
+    width: 95%;
+    margin: 0 auto;
 }
 
 .contacts-list {

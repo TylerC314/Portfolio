@@ -43,39 +43,48 @@ const projectContainer = [
         ]),
 ];
 
-function displayAboutMe(){
+function displayAboutMe() {
     $("main").append(`
-    <section class="about-me-container title-container main-display">
-        <header class="project-title">
-            <h2>About Me</h2>
-        </header>
-    </section>
-    <section class="headline-container main-display">
-        <p>Hello, I’m Tyler. I’m a full-stack developer living in the Greater Seattle Area.</p>
-        <p>My interests include: </p>
-        <ul class="interests-list">
-            <li>PC Gaming</li>
-            <li>Working Out</li>
-            <li>Meditation</li>
-            <li>Programming</li>
-        </ul>
-        <p>As a current student in the Thinkful Full-Stack Flex program I’m interested in web-development and being on
+    <div class="about-me-container content-container">
+        <section class="about-me-title title-container main-display">
+            <header class="project-title">
+                <h2>About Me</h2>
+            </header>
+        </section>
+        <section class="headline-container main-display">
+            <p>Hello, I’m Tyler. I’m a full-stack developer living in the Greater Seattle Area.</p>
+            <p>My interests include: </p>
+            <ul class="interests-list">
+                <li>PC Gaming</li>
+                <li>Working Out</li>
+                <li>Meditation</li>
+                <li>Programming</li>
+            </ul>
+            <p>As a current student in the Thinkful Full-Stack Flex program I’m interested in web-development and being on
             the front end of new technologies. I’ve always enjoyed solving puzzles, so programming has been a natural
             fit for me. Learning new, more optimal ways of solving problems is one of my favorite things about being a
             web developer. I look forward to becoming part of a team of knowledgeable programmers to hone my programming
             skills and help build great websites! 
-        </p>
-    </section>
+            </p>
+        </section>
+    </div>
     `);
 }
 
 function displayProject(project) {
     $("main").append(`
-    <section class="project-title-container title-container main-display">
+    <section class="projects-title title-header-container">
+        <header>
+            <h2>My Projects</h2>
+        </header>
+    </section>
+
+    <div class="content-container">
+        <section class="project-title-container title-container main-display">
         <header class="project-title">
             <h2>${project.projectName}</h2>
         </header>
-    </section>
+        </section>
     <section class="project-container">
         <p class="project-text">${project.projecDescription}</p>
         ${project.projectDisplay}
@@ -91,7 +100,9 @@ function displayProject(project) {
                 <li><a href="${project.gitHubRepo}" target="_blank">GitHub repo</a></li>
             </ul>
         </section>
-    </section>`);
+    </section>
+    </div>
+    `);
 }
 
 function displayContactMe() {
@@ -120,7 +131,7 @@ function handlers(){
     $(".about-me-button").click(function() {
         $("body, html").animate(
             {
-                scrollTop: $(".about-me-container").offset().top - $("nav").height()
+                scrollTop: $(".name-title").offset().top - $("nav").height()
             },
             300
         );
@@ -129,7 +140,7 @@ function handlers(){
     $(".projects-button").click(function() {
         $("body, html").animate(
             {
-                scrollTop: $(".project-title-container").offset().top - $("nav").height()
+                scrollTop: $(".projects-title").offset().top - $("nav").height()
             },
             300
         );
