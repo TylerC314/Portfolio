@@ -64,7 +64,6 @@ main {
 
 main, nav {
     margin: 0 auto;
-    
 }
 
 .main-display {
@@ -74,29 +73,14 @@ main, nav {
 ul {
     list-style: none;
     padding-left: 0;
-    background-color: var(--main-background-color);
-}
-
-p {
-    background-color: var(--main-background-color);
 }
 
 a {
     text-decoration: none;
 }
 
-a:hover {
-    cursor: pointer;
-}
-
 button {
     background-color: var(--main-background-color);
-}
-
-button:hover {
-    cursor: pointer;
-    background-color: var(--main-text-color);
-    color: black;
 }
 
 .link-text {
@@ -113,17 +97,11 @@ button:hover {
     flex-direction: column;
 }
 
-.contact-info {
+.navigation-buttons {
     margin-left: auto;
     margin-right: auto;
     display: flex;
     justify-content: center;
-}
-
-.contact-info > a {
-    color: var(--main-accent-color);
-    border-bottom: 1px solid var(--main-accent-color);
-    margin: 0 5px;
 }
 
 .contacts-list {
@@ -167,6 +145,7 @@ section {
 .project-container {
     margin: 0 auto;
     padding-top: 10px;
+    background-color: var(--main-background-color);
 }
 
 .project-container > section {
@@ -223,6 +202,7 @@ footer > ul {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    background-color: var(--main-background-color);
 }
 
 footer > ul > a {
@@ -249,6 +229,16 @@ footer > ul > a {
 }
 
 @media screen and (min-width: 1024px) {
+    a:hover {
+        cursor: pointer;
+    }
+
+    button:hover {
+        cursor: pointer;
+        background-color: var(--main-text-color);
+        color: black;
+    }
+
     .project-container > ul {
         flex-direction: row;
         flex-wrap: wrap;
