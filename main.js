@@ -51,7 +51,7 @@ function displayAboutMe(){
         </header>
     </section>
     <section class="headline-container main-display">
-        <p>Hello, I’m Tyler. I’m a full-stack developer living in the Greater Seattle Area</p>
+        <p>Hello, I’m Tyler. I’m a full-stack developer living in the Greater Seattle Area.</p>
         <p>My interests include: </p>
         <ul class="interests-list">
             <li>PC Gaming</li>
@@ -62,7 +62,8 @@ function displayAboutMe(){
         <p>As a current student in the Thinkful Full-Stack Flex program I’m interested in web-development and being on
             the front end of new technologies. I’ve always enjoyed solving puzzles, so programming has been a natural
             fit for me. Learning new, more optimal ways of solving problems is one of my favorite things about being a
-            web developer. In my off time, I enjoy PC gaming and going to the gym.
+            web developer. I look forward to becoming part of a team of knowledgeable programmers to hone my programming
+            skills and help build great websites! 
         </p>
     </section>
     `);
