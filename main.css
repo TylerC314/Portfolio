@@ -12,7 +12,8 @@
     --main-text-color: #14f500;
     --main-background-color: #00000086;
     --main-accent-color: #b2b7bb;
-    --alternate-text-color: #07e2ff;
+    --alternate-text-color: #e207ff;
+    --link-color: rgb(7, 196, 253);
 }
 
 *{
@@ -92,28 +93,17 @@ ul {
 }
 
 a {
-    text-decoration: none;
+    color: var(--link-color);
 }
 
 button {
     background-color: var(--main-background-color);
 }
 
-.link-text {
-    text-decoration: none;
-    color: var(--main-text-color);
-}
-
-.link-text:hover {
-    color: var(--alternate-text-color);
-}
-
 .contact-me-container {
     display: flex;
     flex-direction: column;
 }
-
-
 
 .contacts-list {
     max-width: 90px;
@@ -187,7 +177,7 @@ section {
     border: none;
     display: flex;
     flex-direction: row;
-    margin-top: -30px;
+    margin-top: -30px
 }
 
 .logos > ul {
@@ -219,10 +209,12 @@ footer > ul {
 footer > ul > a {
     padding: 0 2%;
     text-decoration: none;
+
 }
 
 .footer-text {
     visibility: hidden;
+    color: var(--main-text-color);
 }
 
 .footer-icons {
@@ -250,6 +242,7 @@ footer > ul > a {
 
     a:hover {
         cursor: pointer;
+        color: var(--alternate-text-color);
     }
 
     button:hover {

@@ -83,16 +83,18 @@ function displayProject(project) {
     <section class="project-container">
         <p class="project-text">${project.projecDescription}</p>
         ${project.projectDisplay}
-        <section class="project-links">
-            <ul>
-                <a href="${project.projectSite}" target="_blank"><span class="link-text">Site Link</span></a>
-                <a href="${project.gitHubRepo}" target="_blank"><span class="link-text">GitHub repo</span></a>
-            </ul>
-        </section>
+
         <section class="logos">
             <p>Technologies used:<p>
             ${project.logoDisplay}
         </section>
+        <section class="project-links">
+            <ul>
+                <span>Try it out: </span><a href="${project.projectSite}" target="_blank">Site Link</a>
+                <a href="${project.gitHubRepo}" target="_blank">GitHub repo</a>
+            </ul>
+        </section>
+        
     </section>`);
 }
 
@@ -102,11 +104,11 @@ function displayContactMe() {
         <p>If you'd like to get in contact with me you can contact me through the following links:</p>
         <ul class="contacts-list">
             <li><img src="images/Logos/LinkedIn.png" alt="LinkedIn Logo">
-            <a href="https://www.linkedin.com/in/tyler-clark-171974185/" target="_blank"><span class="link-text">LinkedIn</span></a></li>
+            <a href="https://www.linkedin.com/in/tyler-clark-171974185/" target="_blank">LinkedIn</a></li>
             <li><img src="images/Logos/GitHub-Light.png" alt="GitHub Logo">
-            <a href="https://github.com/TylerC314" target="_blank"><span class="link-text">GitHub</span></a></li>
+            <a href="https://github.com/TylerC314" target="_blank">GitHub</a></li>
             <li><img src="images/Logos/Email.png" alt="Email">
-            <a href="mailto:tylerclark314@gmail.com"><span class="link-text">Email</span></a></li>
+            <a href="mailto:tylerclark314@gmail.com">Email</a></li>
         </ul>
     </section>`);
 }
