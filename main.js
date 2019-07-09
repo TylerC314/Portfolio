@@ -82,7 +82,7 @@ function displayContactMe() {
         <ul class="contacts-list">
             <li><img src="images/Logos/LinkedIn.png" alt="LinkedIn Logo">
             <a href="https://www.linkedin.com/in/tyler-clark-171974185/" target="_blank"><span class="link-text">LinkedIn</span></a></li>
-            <li><img src="images/Logos/GitHub Light.png" alt="GitHub Logo">
+            <li><img src="images/Logos/GitHub-Light.png" alt="GitHub Logo">
             <a href="https://github.com/TylerC314" target="_blank"><span class="link-text">GitHub</span></a></li>
             <li><img src="images/Logos/Email.png" alt="Email">
             <a href="mailto:tylerclark314@gmail.com"><span class="link-text">Email</span></a></li>
