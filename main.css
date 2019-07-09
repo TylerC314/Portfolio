@@ -41,7 +41,6 @@ nav {
 .navigation-buttons {
     display: flex;
     justify-content: center;
-    width: 100%;
     height: 10%;
 }
 
@@ -196,6 +195,7 @@ section {
 footer {
     position: absolute;
     bottom: 0;
+    left: 0;
     width: 100%;
     text-align: center;
     
@@ -208,7 +208,7 @@ footer > ul {
     background-color: var(--main-background-color);
 }
 
-footer > ul > a {
+footer > ul > li > a {
     padding: 0 2%;
     text-decoration: none;
 
@@ -216,12 +216,13 @@ footer > ul > a {
 
 .footer-text {
     visibility: hidden;
-    color: var(--main-text-color);
+    color: var(--link-color);
 }
 
 .footer-icons {
     width: 25px;
     height: 25px;
+    text-decoration: none;
 }
 
 
@@ -261,5 +262,10 @@ footer > ul > a {
 
     .footer-text {
         visibility: visible;
+    }
+
+    .footer-text:hover {
+        cursor: pointer;
+        color: var(--alternate-text-color);
     }
 }
