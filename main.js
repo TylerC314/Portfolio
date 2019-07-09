@@ -44,7 +44,6 @@ const projectContainer = [
 ];
 
 function displayAboutMe(){
-    // $("main").html("");
     $("main").append(`
     <section class="about-me-container title-container main-display">
         <header role="heading" class="project-title">
@@ -98,7 +97,6 @@ function displayProject(project) {
 }
 
 function displayContactMe() {
-    // $("main").html("");
     $("main").append(`
     <section class="contact-me-container main-display">
         <p>If you'd like to get in contact with me you can contact me through the following links:</p>
@@ -114,28 +112,17 @@ function displayContactMe() {
 }
 
 function displayAllProjects() {
-    // $("main").html("");
     projectContainer.forEach(function(element) {
         displayProject(element);
     });
 }
 
 function handlers(){
-    // $(".about-me-button").click(function() {
-    //     displayAboutMe();
-    // });
-    
-    // $(".contact-me-button").click(function() {
-    //     displayContactMe();
-    // });
-    // $("html").on("click", ".projects-button", function() {
-    //     displayAllProjects();
-    // });
-
+    let screenOffset = .1;
     $(".about-me-button").click(function() {
         $("body, html").animate(
             {
-                scrollTop: $(".title-container").offset().top
+                scrollTop: $(".about-me-container").offset().top - $("nav").height()
             },
             300
         );
@@ -144,7 +131,7 @@ function handlers(){
     $(".projects-button").click(function() {
         $("body, html").animate(
             {
-                scrollTop: $(".project-title-container").offset().top
+                scrollTop: $(".project-title-container").offset().top - $("nav").height()
             },
             300
         );
